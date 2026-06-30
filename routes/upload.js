@@ -2,7 +2,11 @@ import express from 'express';
 import multer from 'multer';
 import path from 'path';
 import { v2 as cloudinary } from 'cloudinary';
+import dotenv from 'dotenv';
 import { protect } from '../middleware/auth.js';
+
+// Load environment variables immediately to support ES Module imports hoisting
+dotenv.config();
 
 const router = express.Router();
 
